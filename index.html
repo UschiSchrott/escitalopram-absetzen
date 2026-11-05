@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Escitalopram absetzen – Studienlage</title>
+  <meta name="description" content="Neutrale Übersicht zu Absetzsymptomen, der Frage nach dauerhaften Schäden, Ausschleich-Strategien (inkl. hyperbolischem Tapering) und typischen Problemen beim Absetzen – mit Leitlinien und systematischen Reviews.">
+  <meta name="robots" content="index,follow">
+  <style>
+    :root {
+      --bg: #f7f6f3;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #5c5c5c;
+      --border: #e2e0da;
+      --accent: #1f5f8b;
+      --accent-soft: #e8f1f7;
+      --warn-bg: #fff6e5;
+      --warn-border: #e6b84d;
+      --warn-text: #5c4400;
+      --info-bg: #eef5fa;
+      --info-border: #7aa8c7;
+      --info-text: #1a3d55;
+      --pro-bg: #eef8f0;
+      --pro-border: #6aab7a;
+      --con-bg: #f8eeee;
+      --con-border: #c48a8a;
+      --quote-border: #c9c4b8;
+      --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.04);
+      --radius: 12px;
+      --max: 700px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121417;
+        --surface: #1b1f24;
+        --text: #ececec;
+        --muted: #a3a8b0;
+        --border: #2c333c;
+        --accent: #7eb6d9;
+        --accent-soft: #243542;
+        --warn-bg: #2e2616;
+        --warn-border: #a8842e;
+        --warn-text: #f0d58a;
+        --info-bg: #1a2833;
+        --info-border: #4f7fa0;
+        --info-text: #c5dceb;
+        --pro-bg: #1a2a1e;
+        --pro-border: #4f8a5c;
+        --con-bg: #2a1c1c;
+        --con-border: #9a6262;
+        --quote-border: #3a414a;
+        --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 1.05rem;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-underline-offset: 2px; }
+    a:hover { text-decoration-thickness: 2px; }
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 1.5rem 1.15rem 4rem;
+    }
+    header.page-header {
+      margin-bottom: 1.5rem;
+    }
+    header.page-header h1 {
+      font-size: clamp(1.55rem, 4.5vw, 2rem);
+      line-height: 1.25;
+      margin: 0 0 .6rem;
+      letter-spacing: -0.02em;
+    }
+    header.page-header .summary {
+      color: var(--muted);
+      margin: 0;
+      font-size: 1.02rem;
+    }
+    .callout {
+      border-radius: var(--radius);
+      padding: 1rem 1.1rem;
+      margin: 1.25rem 0;
+      border: 1px solid;
+      background: var(--surface);
+    }
+    .callout.warning {
+      background: var(--warn-bg);
+      border-color: var(--warn-border);
+      color: var(--warn-text);
+    }
+    .callout.info {
+      background: var(--info-bg);
+      border-color: var(--info-border);
+      color: var(--info-text);
+    }
+    .callout .lead {
+      font-weight: 700;
+      display: block;
+      margin-bottom: .35rem;
+    }
+    nav.toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.15rem;
+      margin: 1.5rem 0 2rem;
+      box-shadow: var(--shadow);
+    }
+    nav.toc h2 {
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--muted);
+      margin: 0 0 .6rem;
+      font-weight: 600;
+    }
+    nav.toc ol {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+    nav.toc li { margin: .3rem 0; }
+    nav.toc a { text-decoration: none; }
+    nav.toc a:hover { text-decoration: underline; }
+    section {
+      margin: 2.4rem 0;
+    }
+    section h2 {
+      font-size: 1.35rem;
+      margin: 0 0 .9rem;
+      padding-bottom: .45rem;
+      border-bottom: 1px solid var(--border);
+      letter-spacing: -0.015em;
+    }
+    section h3 {
+      font-size: 1.1rem;
+      margin: 1.5rem 0 .55rem;
+    }
+    p { margin: 0 0 1rem; }
+    ul, ol { margin: 0 0 1rem; padding-left: 1.25rem; }
+    li { margin: .35rem 0; }
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 1rem 0 1.25rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .92rem;
+      min-width: 540px;
+    }
+    th, td {
+      padding: .7rem .8rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: var(--accent-soft);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    tr:last-child td { border-bottom: none; }
+    blockquote {
+      margin: 1.25rem 0;
+      padding: .85rem 1rem .85rem 1.1rem;
+      border-left: 4px solid var(--quote-border);
+      background: var(--surface);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      color: var(--muted);
+      font-style: italic;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: .55rem;
+      font-style: normal;
+      font-size: .85rem;
+      color: var(--muted);
+    }
+    .props {
+      display: grid;
+      gap: .75rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .prop {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: .9rem 1rem;
+    }
+    .prop dt {
+      font-weight: 700;
+      margin: 0 0 .35rem;
+      color: var(--accent);
+      font-size: .95rem;
+    }
+    .prop dd { margin: 0; color: var(--text); }
+    .proscons {
+      display: grid;
+      gap: .85rem;
+      margin: 1.25rem 0;
+    }
+    @media (min-width: 640px) {
+      .proscons { grid-template-columns: 1fr 1fr; }
+    }
+    .pc-card {
+      border-radius: var(--radius);
+      border: 1px solid;
+      padding: 1rem;
+      background: var(--surface);
+    }
+    .pc-card.pro { border-color: var(--pro-border); background: var(--pro-bg); }
+    .pc-card.con { border-color: var(--con-border); background: var(--con-bg); }
+    .pc-card h3 {
+      margin: 0 0 .65rem;
+      font-size: 1rem;
+    }
+    .pc-card ul { margin: 0; padding-left: 1.1rem; }
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 1.5rem;
+    }
+    .steps li {
+      counter-increment: step;
+      position: relative;
+      padding: .9rem 1rem .9rem 3.2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin: 0 0 .65rem;
+    }
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: .85rem;
+      top: .95rem;
+      width: 1.7rem;
+      height: 1.7rem;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: .9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+    @media (prefers-color-scheme: dark) {
+      .steps li::before { color: #0e1418; }
+    }
+    .steps .title { font-weight: 700; display: block; margin-bottom: .25rem; }
+    .sources {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+      counter-reset: src;
+    }
+    .sources li {
+      counter-increment: src;
+      margin: 0 0 .7rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: .85rem 1rem .85rem 2.7rem;
+      position: relative;
+    }
+    .sources li::before {
+      content: counter(src);
+      position: absolute;
+      left: .9rem;
+      top: .9rem;
+      font-weight: 700;
+      color: var(--accent);
+      font-size: .95rem;
+    }
+    .sources .site {
+      display: block;
+      font-size: .82rem;
+      color: var(--muted);
+      margin-top: .2rem;
+    }
+    .sources a { font-weight: 600; text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+    .extra-links {
+      font-size: .95rem;
+      color: var(--muted);
+      word-break: break-word;
+    }
+    footer.page-footer {
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    .back-top {
+      display: inline-block;
+      margin-top: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .back-top:hover { text-decoration: underline; }
+    hr.soft {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+    .nested { margin-top: .25rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="page-header">
+      <h1>Escitalopram absetzen – Studienlage</h1>
+      <p class="summary">Neutrale Übersicht zu Absetzsymptomen, der Frage nach dauerhaften Schäden, Ausschleich-Strategien (inkl. hyperbolischem Tapering) und typischen Problemen beim Absetzen – mit Leitlinien und systematischen Reviews.</p>
+    </header>
+
+    <aside class="callout warning" role="note">
+      <span class="lead">Kein individueller Rat</span>
+      Diese Page ist eine allgemeine Übersicht zur Studien- und Leitlinienlage. Sie ersetzt keine ärztliche oder psychotherapeutische Beratung. Absetzen oder Dosisänderungen von Escitalopram bitte nur nach Absprache mit der behandelnden Ärztin oder dem behandelnden Arzt planen.
+    </aside>
+
+    <nav class="toc" aria-label="Inhaltsverzeichnis">
+      <h2>Inhalt</h2>
+      <ol>
+        <li><a href="#zusammenfassung">Kurzfassung</a></li>
+        <li><a href="#absetzsymptome">Absetzsymptome</a></li>
+        <li><a href="#dauerhaft">Dauerhafte Schäden / Protracted Withdrawal</a></li>
+        <li><a href="#ausschleichen">Ausschleichen und hyperbolisches Tapering</a></li>
+        <li><a href="#probleme">Probleme beim Absetzen</a></li>
+        <li><a href="#quellen">Quellen</a></li>
+      </ol>
+    </nav>
+
+    <section id="zusammenfassung">
+      <h2>Kurzfassung</h2>
+      <p>Escitalopram (SSRI) kann beim Reduzieren oder Absetzen ein Absetzsyndrom auslösen. Das ist in Fachinformationen, Leitlinien und Reviews gut belegt. Häufigkeit und Schwere werden in der Literatur unterschiedlich geschätzt: Fachinfo-Daten nennen Absetz-Ereignisse bei etwa 25&nbsp;% unter Escitalopram versus 15&nbsp;% unter Placebo; systematische Übersichten über Antidepressiva insgesamt liegen je nach Methode zwischen etwa 15&nbsp;% „echten“ Absetzsymptomen (nach Abzug von Placebo-/Nocebo-Effekten) und höheren Survey-/Review-Werten um die Hälfte der Absetzversuche.</p>
+      <ul>
+        <li>Typische Symptome: Schwindel, Stromschläge/Zaps, Schlafstörungen, Übelkeit, Reizbarkeit, Angst, grippeähnliche Beschwerden – oft innerhalb weniger Tage, meist innerhalb von Wochen rückläufig; bei manchen länger.</li>
+        <li>Nachhaltige Organschäden sind nicht als gesicherte Folge belegt. Länger anhaltende Absetzbeschwerden (Protracted Withdrawal / PAWS) werden berichtet, die Evidenz dazu ist jedoch dünn und umstritten.</li>
+        <li>Abruptes Absetzen vermeiden. Leitlinien empfehlen stufenweises Ausschleichen; NICE und das Royal College of Psychiatrists betonen proportionale/hyperbolische Reduktionen über Wochen bis Monate.</li>
+        <li>Zentrale Probleme: Verwechslung mit Rückfall, zu schnelles Ausschleichen, fehlende Unterscheidung Absetzsyndrom vs. Rezidiv vs. Protracted Withdrawal.</li>
+      </ul>
+    </section>
+
+    <section id="absetzsymptome">
+      <h2>1. Absetzsymptome (Discontinuation / Withdrawal)</h2>
+      <p>Fachgesellschaften und Hersteller sprechen meist von Discontinuation- oder Absetzsymptomen; Teile der Literatur (u.&nbsp;a. Fava und Mitautorinnen, Davies &amp; Read) verwenden bewusst den Begriff Withdrawal, weil die Symptome pharmakologisch einem Entzug ähneln – ohne dass damit eine „Sucht“ im Sinne von Craving gemeint ist. Das Royal College of Psychiatrists (RCPsych) unterscheidet physische Abhängigkeit (Anpassung des Körpers) von Sucht.</p>
+
+      <h3>Häufigkeit</h3>
+      <p>Für Escitalopram speziell: In der SmPC (Fachinformation Cipralex) traten Absetz-Ereignisse in klinischen Studien bei etwa 25&nbsp;% der Escitalopram-Gruppe und 15&nbsp;% der Placebo-Gruppe auf. Eine kleine Beobachtungsstudie (Yasui-Furukori et al., 2016) fand bei 14 von 25 Patientinnen und Patienten nach Escitalopram-Absetzen ein Absetzsyndrom; höheres Dosis-/Plasmaspiegel-Niveau war mit höherem Risiko assoziiert.</p>
+      <p>Für Antidepressiva insgesamt (nicht nur Escitalopram): Davies &amp; Read (2019) schätzten in einer systematischen Übersicht eine gewichtete Inzidenz von etwa 56&nbsp;% (Spanne 27–86&nbsp;%); knapp die Hälfte der Betroffenen stufte die Symptome als schwer ein. Henssler et al. (Lancet Psychiatry 2024) fanden in einer Meta-Analyse etwa 31&nbsp;% berichtete Symptome nach Absetzen versus 17&nbsp;% nach Placebo – also rund 15&nbsp;% zusätzlich dem Wirkstoff zuschreibbar; schwere Symptome bei etwa 3&nbsp;% (etwa 1 von 35). RCPsych fasst zusammen: etwa ein Drittel bis die Hälfte der Absetzenden bemerkt Symptome in irgendeinem Ausmaß. Escitalopram gilt dort als mittleres Absetzrisiko (höher als Fluoxetin, niedriger als z.&nbsp;B. Paroxetin oder Venlafaxin).</p>
+      <p>Die große Spannweite erklärt sich durch Studiendesign (kurze RCTs vs. Umfragen), Beobachtungsdauer, Messinstrumente (z.&nbsp;B. DESS-Checkliste) und Placebo-/Nocebo-Effekte. Fava et al. (2015) zeigten in einem systematischen Review, dass Absetzsymptome bei allen SSRIs vorkommen können – auch bei Escitalopram –, und dass ausschleichendes Absetzen das Risiko nicht zuverlässig eliminiert.</p>
+
+      <h3>Welche Symptome und wie lange?</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Symptomgruppe</th>
+              <th>Beispiele</th>
+              <th>Typischer Verlauf</th>
+              <th>Evidenzhinweis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sensorisch / vestibulär</td>
+              <td>Schwindel, Gleichgewichtsstörung, Parästhesien, elektrische Schocks (Zaps)</td>
+              <td>Oft Tage nach Reduktion/Stopp; meist Tage bis Wochen</td>
+              <td>SmPC, FDA-Label, Fava 2015, RCPsych</td>
+            </tr>
+            <tr>
+              <td>Gastrointestinal</td>
+              <td>Übelkeit, Erbrechen, Durchfall</td>
+              <td>Früh, oft selbstlimitierend</td>
+              <td>SmPC Escitalopram</td>
+            </tr>
+            <tr>
+              <td>Schlaf</td>
+              <td>Insomnie, lebhafte/beängstigende Träume</td>
+              <td>Tage bis Wochen</td>
+              <td>SmPC, RCPsych, NVL-Patientenblatt</td>
+            </tr>
+            <tr>
+              <td>Affektiv / vegetativ</td>
+              <td>Reizbarkeit, Angst, innere Unruhe, Stimmungsschwankungen, grippeähnlich</td>
+              <td>Überlappung mit Rückfall möglich</td>
+              <td>RCPsych, NVL, Fava</td>
+            </tr>
+            <tr>
+              <td>Kognitiv</td>
+              <td>Konzentrationsprobleme, Verwirrtheit, Derealisation</td>
+              <td>Variabel</td>
+              <td>RCPsych, Yasui-Furukori 2016</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>SmPC Escitalopram: Symptome beginnen meist in den ersten Tagen; in der Regel mild bis mäßig und selbstlimitierend innerhalb von etwa 2 Wochen; bei manchen Personen länger (2–3 Monate oder mehr). Das NVL-Patientenblatt (Deutschland) nennt typisch Beginn nach 2–4 Tagen und Rückbildung in 2–6 Wochen. Davies &amp; Read sowie RCPsych betonen, dass bei einem Teil der Betroffenen Wochen bis Monate (selten länger) beschrieben werden – Leitlinien älterer Generation hätten Dauer und Schwere teils unterschätzt.</p>
+      <blockquote>
+        Abrupt discontinuation should be avoided. … Generally these symptoms are self-limiting and usually resolve within 2 weeks, though in some individuals they may be prolonged (2–3 months or more).
+        <cite>Cipralex SmPC (emc), Abschnitt zu Discontinuation symptoms</cite>
+      </blockquote>
+    </section>
+
+    <section id="dauerhaft">
+      <h2>2. Nachhaltige / dauerhafte Schäden und Protracted Withdrawal</h2>
+      <p>Drei Dinge sauber trennen: (A) akutes Absetzsyndrom, (B) Rückfall der Grunderkrankung (Depression/Angst), (C) länger anhaltende Beschwerden nach Absetzen (Protracted Withdrawal / Post-Acute Withdrawal / PAWS). Nur bei (C) stellt sich die Frage nach „dauerhaften Schäden“ im engeren Sinn.</p>
+
+      <div class="proscons">
+        <div class="pc-card pro">
+          <h3>Was belastbarer belegt ist</h3>
+          <ul>
+            <li>Akute Absetzsymptome nach SSRI/Escitalopram sind in RCTs, SmPC/FDA und systematischen Reviews klar dokumentiert.</li>
+            <li>In der Lewis-Studie (pragmatische RCT) blieben Absetzsymptome in der Absetzgruppe über Monate messbar höher als unter Fortführung (u.&nbsp;a. bis Woche 39) – Hinweis auf länger anhaltende, aber nicht notwendig permanente Symptome.</li>
+            <li>Fachinformationen erwähnen Berichte über anhaltende sexuelle Funktionsstörungen trotz Absetzen von SSRI/SNRI (Post-SSRI sexual dysfunction) – als Signal, nicht als quantifizierte Häufigkeit.</li>
+          </ul>
+        </div>
+        <div class="pc-card con">
+          <h3>Was unsicher oder umstritten bleibt</h3>
+          <ul>
+            <li>Eine systematische Übersicht zu PAWS (Epidemiology and Psychiatric Sciences, 2025) findet nur wenige Studien, überwiegend niedrige Evidenzsicherheit; Prävalenz, Dauer und Beeinträchtigung lassen sich nicht zuverlässig schätzen.</li>
+            <li>Internet-Forum-Analysen (z.&nbsp;B. Hengartner et al., 2020) beschreiben sehr lange Verläufe (Monate bis Jahre), sind aber stark selektionsverzerrt und keine Bevölkerungsstichprobe.</li>
+            <li>Es fehlt der Nachweis struktureller, irreversibler Organschäden als typische Escitalopram-Folge. Ob anhaltende Symptome ein eigenständiges Syndrom, unerkannte Rückfälle oder andere Faktoren sind, ist wissenschaftlich weiter diskutiert.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>Fazit zur Studienfrage „dauerhafte Schäden“: Belastbar belegt ist das häufige akute (und bei manchen länger anhaltende) Absetzsyndrom. Ob und wie oft ein chronisches, über Jahre persistierendes Entzugssyndrom vorkommt und ob es bleibende biologische Schäden gibt, ist derzeit nicht hochgradig evidenzgesichert – die Literatur beschreibt es als reales, aber schlecht quantifiziertes Phänomen mit schwacher Evidenzbasis.</p>
+    </section>
+
+    <section id="ausschleichen">
+      <h2>3. Wie Escitalopram am besten absetzen</h2>
+      <p>Keine Dosierungs-„Rezeptur“ für einzelne Personen. Folgende Prinzipien stammen aus Leitlinien und der Tapering-Literatur; die konkrete Planung gehört in die Hand der verschreibenden Ärztin oder des Arztes.</p>
+
+      <dl class="props">
+        <div class="prop">
+          <dt>NVL / S3 Unipolare Depression (DE)</dt>
+          <dd>In der Regel schrittweise über etwa 4 Wochen; längere Zeiträume oft nötig. Bei starken Absetzbeschwerden: vorherige Dosis wieder aufnehmen und langsamer ausschleichen. Patientenblatt: am Behandlungsende oft 8–12 Wochen Ausschleichen.</dd>
+        </div>
+        <div class="prop">
+          <dt>NICE NG215 / QS8</dt>
+          <dd>Stufenweise Reduktion; Tempo und Dauer gemeinsam festlegen; Symptome überwachen; nächste Reduktion erst, wenn Absetzsymptome erträglich oder abgeklungen. NG215: langsame, stufenweise Reduktion proportional zur aktuellen Dosis (kleinere Schritte bei niedrigerer Dosis).</dd>
+        </div>
+        <div class="prop">
+          <dt>SmPC Escitalopram</dt>
+          <dd>Abruptes Absetzen vermeiden; mindestens 1–2 Wochen ausschleichen – bei Bedarf über mehrere Wochen/Monate nach individuellem Bedarf.</dd>
+        </div>
+        <div class="prop">
+          <dt>RCPsych (2024)</dt>
+          <dd>Niemals plötzlich (außer bei schweren Nebenwirkungen). Escitalopram: mittleres Risiko. Oft proportionale Schritte (z.&nbsp;B. ca. 25–50&nbsp;% der aktuellen Dosis alle 2–4 Wochen) oder langsameres hyperbolisches Schema; bei Bedarf Flüssigformulierungen für sehr kleine Dosen.</dd>
+        </div>
+        <div class="prop">
+          <dt>Horowitz &amp; Taylor (2019)</dt>
+          <dd>Hyperbolisches Tapering: Dosis so senken, dass die Serotonintransporter-Belegung möglichst gleichmäßig sinkt – also immer kleinere Milligramm-Schritte in den unteren Dosisbereichen, oft weit unter die übliche Minimaltablette.</dd>
+        </div>
+        <div class="prop">
+          <dt>Cochrane (2021)</dt>
+          <dd>Sehr unsichere Evidenz zu Absetzstrategien; die meisten Studien nutzten schnelle Tapern (≤&nbsp;4 Wochen) und vermischten Absetzsymptome mit Rückfall. Bedarf an Trials mit langsamem Ausschleichen.</dd>
+        </div>
+      </dl>
+
+      <h3>Prinzipien des Ausschleichens (keine Rezeptdosis)</h3>
+      <ol class="steps">
+        <li>
+          <span class="title">Entscheidung und Timing klären</span>
+          Gemeinsam mit Ärztin/Arzt: Warum absetzen? Remissionsdauer, Rückfallrisiko, Nebenwirkungen, Schwangerschaftswunsch. Nicht eigenmächtig stoppen.
+        </li>
+        <li>
+          <span class="title">Stufenplan festlegen</span>
+          Reduktion in Stufen statt abruptem Stopp. Dauer oft Wochen bis Monate – abhängig von Einnahmedauer, Dosis, früheren Absetzversuchen und Verträglichkeit.
+        </li>
+        <li>
+          <span class="title">Proportional / hyperbolisch denken</span>
+          Gleiche mg-Schritte (z.&nbsp;B. immer −5&nbsp;mg) belasten den unteren Dosisbereich überproportional. NICE/Horowitz: Schritte eher als Anteil der aktuellen Dosis; zum Schluss sehr kleine Schritte, ggf. Tropfen/Lösung.
+        </li>
+        <li>
+          <span class="title">Warten und beobachten</span>
+          Zwischen den Stufen Zeit lassen (häufig 2–4 Wochen als Orientierung in Patienteninformationen), bis Symptome erträglich sind – dann erst weiter reduzieren.
+        </li>
+        <li>
+          <span class="title">Bei starken Symptomen pausieren</span>
+          Letzte verträgliche Dosis wiederherstellen, Tempo verlangsamen, kleinere Schritte. Bei Suizidgedanken oder schweren Symptomen sofort ärztlichen Kontakt suchen.
+        </li>
+        <li>
+          <span class="title">Rückfall vs. Absetzen unterscheiden</span>
+          Zeitlicher Beginn (oft Tage nach Reduktion), ungewöhnliche Symptome (Zaps), rasche Besserung nach Dosiserhöhung sprechen eher für Absetzen als für klassisches Rezidiv.
+        </li>
+      </ol>
+
+      <blockquote>
+        We therefore suggest that SSRIs should be tapered hyperbolically and slowly to doses much lower than those of therapeutic minimums … Withdrawal symptoms will then be minimised.
+        <cite>Horowitz MA, Taylor D. Lancet Psychiatry. 2019</cite>
+      </blockquote>
+    </section>
+
+    <section id="probleme">
+      <h2>4. Welche Probleme können beim Absetzen auftreten?</h2>
+      <ol>
+        <li>
+          <strong>Absetzsyndrom</strong>
+          <ul class="nested">
+            <li>Körperliche und psychische Beschwerden durch zu schnelle Reduktion oder Stopp – von mild bis schwer.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Fehldiagnose als Rückfall</strong>
+          <ul class="nested">
+            <li>Niedergeschlagenheit, Angst und Schlafstörung ähneln der Grunderkrankung; unnötige Dauertherapie oder Dosiserhöhung können die Folge sein, wenn Absetzen nicht erkannt wird.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Echter Rückfall / Rezidiv</strong>
+          <ul class="nested">
+            <li>Besonders nach unzureichender Erhaltungstherapie oder bei hoher Rezidivneigung; tritt oft später auf (Wochen bis Monate) als typische Absetzsymptome.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Länger anhaltende Beschwerden (PAWS / Protracted Withdrawal)</strong>
+          <ul class="nested">
+            <li>Möglich, aber Prävalenz und Mechanismen unklar; Evidenz schwach.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Schwere Reaktionen</strong>
+          <ul class="nested">
+            <li>Selten: starke Schwindelattacken, ausgeprägte Unruhe/Akathisie, Suizidgedanken im Absetzkontext – RCPsych und SmPC fordern unmittelbare ärztliche Hilfe.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Praktische Hürden</strong>
+          <ul class="nested">
+            <li>Tablettenstärken erlauben keine feinen Schritte; Flüssigformen oder (in manchen Ländern) Tapering-Hilfen können nötig sein – immer apotheken- und arztgeführt.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Sexuelle Funktionsstörungen nach Absetzen</strong>
+          <ul class="nested">
+            <li>In SmPC/Label als mögliche anhaltende Beschwerden erwähnt; Häufigkeit und Verlauf noch unzureichend systematisch geklärt.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <aside class="callout info" role="note">
+        <span class="lead">Unterscheidung in der Praxis</span>
+        Absetzsyndrom: oft schnell nach Dosisänderung, „nie zuvor so empfunden“, Besserung binnen Stunden/Tagen nach Wiederaufnahme. Rückfall: meist verzögert, Symptome ähneln der früheren Episode, Antidepressiva brauchen wieder Wochen bis zur Wirkung.
+      </aside>
+    </section>
+
+    <section id="quellen">
+      <h2>Quellen und weiterführende Links</h2>
+      <p>Nur öffentlich prüfbare Quellen. Stand der Recherche: November 2026. Links wurden, soweit erreichbar, geprüft.</p>
+      <ol class="sources">
+        <li>
+          <a href="https://www.rcpsych.ac.uk/mental-health/treatments-and-wellbeing/stopping-antidepressants" rel="noopener noreferrer" target="_blank">RCPsych: Stopping antidepressants (Patienteninformation, aktualisiert)</a>
+          <span class="site">Royal College of Psychiatrists · 2024</span>
+        </li>
+        <li>
+          <a href="https://www.nice.org.uk/guidance/ng215" rel="noopener noreferrer" target="_blank">NICE NG215 – Medicines associated with dependence or withdrawal symptoms</a>
+          <span class="site">NICE · 2022</span>
+        </li>
+        <li>
+          <a href="https://www.nice.org.uk/guidance/QS8/chapter/quality-statement-4-stopping-antidepressants" rel="noopener noreferrer" target="_blank">NICE QS8 Quality statement 4: Stopping antidepressants</a>
+          <span class="site">NICE · 2023</span>
+        </li>
+        <li>
+          <a href="https://www.leitlinien.de/patient-innen/patientenblaetter/depression-absetzen" rel="noopener noreferrer" target="_blank">NVL-Patientenblatt: Antidepressiva absetzen</a>
+          <span class="site">leitlinien.de / NVL Unipolare Depression · 2022</span>
+        </li>
+        <li>
+          <a href="https://www.medicines.org.uk/emc/product/7718/smpc" rel="noopener noreferrer" target="_blank">Cipralex (Escitalopram) SmPC – Discontinuation symptoms</a>
+          <span class="site">emc / MHRA</span>
+        </li>
+        <li>
+          <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/021323s058lbl.pdf" rel="noopener noreferrer" target="_blank">FDA Lexapro (Escitalopram) Prescribing Information (PDF)</a>
+          <span class="site">FDA</span>
+        </li>
+        <li>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/25721705/" rel="noopener noreferrer" target="_blank">Fava et al. – Withdrawal Symptoms after SSRI Discontinuation: A Systematic Review</a>
+          <span class="site">PubMed · 2015</span>
+        </li>
+        <li>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/30292574/" rel="noopener noreferrer" target="_blank">Davies &amp; Read – Incidence, severity and duration of antidepressant withdrawal</a>
+          <span class="site">PubMed / Addictive Behaviors · 2019</span>
+        </li>
+        <li>
+          <a href="https://www.thelancet.com/journals/lanpsy/article/PIIS2215-0366(24)00133-0/fulltext" rel="noopener noreferrer" target="_blank">Henssler et al. – Incidence of antidepressant discontinuation symptoms (Meta-Analyse)</a>
+          <span class="site">Lancet Psychiatry · 2024</span>
+        </li>
+        <li>
+          <a href="https://www.charite.de/en/service/press_reports/artikel/detail/antidepressants_new_data_on_prevalence_of_discontinuation_symptoms/" rel="noopener noreferrer" target="_blank">Charité-Pressebericht zur Henssler-Meta-Analyse (deutsch/englisch)</a>
+          <span class="site">Charité · 2024</span>
+        </li>
+        <li>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/30850328/" rel="noopener noreferrer" target="_blank">Horowitz &amp; Taylor – Tapering of SSRI treatment (hyperbolic tapering)</a>
+          <span class="site">PubMed / Lancet Psychiatry · 2019</span>
+        </li>
+        <li>
+          <a href="https://www.cochrane.org/evidence/CD013495_stopping-long-term-antidepressants-people-depression-or-anxiety" rel="noopener noreferrer" target="_blank">Cochrane: Stopping long-term antidepressants</a>
+          <span class="site">Cochrane · 2021</span>
+        </li>
+        <li>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/27171568/" rel="noopener noreferrer" target="_blank">Yasui-Furukori et al. – Characteristics of Escitalopram Discontinuation Syndrome</a>
+          <span class="site">PubMed · 2016</span>
+        </li>
+        <li>
+          <a href="https://www.cambridge.org/core/journals/epidemiology-and-psychiatric-sciences/article/postacute-withdrawal-syndrome-paws-after-stopping-antidepressants-a-systematic-review-with-metanarrative-synthesis/8BE6D20F785E9DB6259F6757B5719C0E" rel="noopener noreferrer" target="_blank">PAWS after stopping antidepressants – systematic review (Cambridge / EPS)</a>
+          <span class="site">Epidemiology and Psychiatric Sciences · 2025</span>
+        </li>
+        <li>
+          <a href="https://journals.sagepub.com/doi/full/10.1177/2045125320980573" rel="noopener noreferrer" target="_blank">Hengartner et al. – Protracted withdrawal: consumer narratives</a>
+          <span class="site">Therapeutic Advances in Psychopharmacology · 2020</span>
+        </li>
+      </ol>
+
+      <hr class="soft">
+      <p class="extra-links">Zusätzliche Volltext-URLs: NVL-Langfassung Unipolare Depression (DGPPN): <a href="https://www.dgppn.de/_Resources/Persistent/af938cfd12c33afa194fe7e8251599b8016346a9/nvl-005l_S3_Unipolare-Depression_2023-07.pdf" rel="noopener noreferrer" target="_blank">nvl-005l_S3_Unipolare-Depression_2023-07.pdf</a> — Horowitz/Taylor Abstract: <a href="https://www.thelancet.com/journals/lanpsy/article/PIIS2215-0366(19)30032-X/abstract" rel="noopener noreferrer" target="_blank">Lancet Psychiatry Abstract</a></p>
+    </section>
+
+    <footer class="page-footer">
+      <p>Allgemeine Informationsübersicht, keine individuelle Beratung. Stand der Recherche: November 2026.</p>
+      <a class="back-top" href="#">Nach oben</a>
+    </footer>
+  </div>
+</body>
+</html>
